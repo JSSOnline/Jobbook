@@ -1,0 +1,69 @@
+﻿@model Jobbook.Models.JobbookProfileModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>JobbookProfileModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="JobbookProfileFirstName" class="control-label"></label>
+                <input asp-for="JobbookProfileFirstName" class="form-control" />
+                <span asp-validation-for="JobbookProfileFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobbookProfileLastName" class="control-label"></label>
+                <input asp-for="JobbookProfileLastName" class="form-control" />
+                <span asp-validation-for="JobbookProfileLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobbookProfileOpen" class="control-label"></label>
+                <input asp-for="JobbookProfileOpen" class="form-control" />
+                <span asp-validation-for="JobbookProfileOpen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobbookProfileTitle" class="control-label"></label>
+                <input asp-for="JobbookProfileTitle" class="form-control" />
+                <span asp-validation-for="JobbookProfileTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobbookProfileDescription" class="control-label"></label>
+                <input asp-for="JobbookProfileDescription" class="form-control" />
+                <span asp-validation-for="JobbookProfileDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobbookProfilePosts" class="control-label"></label>
+                <input asp-for="JobbookProfilePosts" class="form-control" />
+                <span asp-validation-for="JobbookProfilePosts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobbookProfileWork" class="control-label"></label>
+                <input asp-for="JobbookProfileWork" class="form-control" />
+                <span asp-validation-for="JobbookProfileWork" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobbookProfileEducation" class="control-label"></label>
+                <input asp-for="JobbookProfileEducation" class="form-control" />
+                <span asp-validation-for="JobbookProfileEducation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

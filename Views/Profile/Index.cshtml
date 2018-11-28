@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Jobbook.Models.JobbookProfileModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.JobbookProfileFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobbookProfileLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobbookProfileOpen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobbookProfileTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobbookProfileDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobbookProfilePosts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobbookProfileWork)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobbookProfileEducation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobbookProfileFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobbookProfileLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobbookProfileOpen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobbookProfileTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobbookProfileDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobbookProfilePosts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobbookProfileWork)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobbookProfileEducation)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

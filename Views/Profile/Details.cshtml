@@ -1,0 +1,66 @@
+﻿@model Jobbook.Models.JobbookProfileModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JobbookProfileModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobbookProfileFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobbookProfileFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobbookProfileLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobbookProfileLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobbookProfileOpen)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobbookProfileOpen)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobbookProfileTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobbookProfileTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobbookProfileDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobbookProfileDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobbookProfilePosts)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobbookProfilePosts)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobbookProfileWork)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobbookProfileWork)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobbookProfileEducation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobbookProfileEducation)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

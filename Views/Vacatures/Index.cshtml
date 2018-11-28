@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Jobbook.Models.JobbookVacatureModel>
+
+@{
+    ViewData["Title"] = "Vacatures";
+}
+
+<h2>Vacatures</h2>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="container gutter">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+        <div class="col-md-6 col-sm-12 col box vacatureCard">
+            <h3><a asp-action="Details" asp-route-id="@item.ID">@Html.DisplayFor(modelItem => item.JobTitle)</a></h3>
+            <p><span class="badge badge-secondary">@Html.DisplayFor(modelItem => item.JobContractType)</span>@Html.DisplayFor(modelItem => item.JobLocation)</p>
+            <p>@Html.DisplayFor(modelItem => item.JobDescription)</p>
+            <p><a asp-action="Details" asp-route-id="@item.ID">Lees meer.</a></p>
+        </div>
+        }
+    </div>
+</div>
